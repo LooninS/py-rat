@@ -17,7 +17,7 @@ def handle_client(client_socket):
             print(response)
 
         except Exception as e:
-            print("[!]Crazy shit happened: {e}")
+            print(f"[!]Crazy shit happened: {e}")
             break
 
     client_socket.close()

